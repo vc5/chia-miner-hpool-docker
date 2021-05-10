@@ -1,0 +1,17 @@
+path:
+- /plots
+minerName: 矿机名称
+apiKey: 你的矿池Key
+cachePath: ""
+deviceId: ""
+extraParams: {}
+log:
+  lv: info
+  path: ./log/
+  name: miner.log
+url:
+  info: ""
+  submit: ""
+scanPath: true
+scanMinute: 60
+

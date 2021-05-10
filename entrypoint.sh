@@ -1,0 +1,1 @@
+/opt/hpool-chia-miner -config $configfile
