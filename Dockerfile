@@ -1,6 +1,6 @@
 FROM alpine:3.12
 
-ARG VER=v1.2.0-4
+ARG VER=v1.2.0-5
 ARG TARGETARCH
 ARG ARCH
 ENV configfile="/opt/config.yaml"
