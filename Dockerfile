@@ -16,7 +16,7 @@ RUN apk add --no-cache wget tzdata \
   && mkdir /plots /tmp/linux  \
   && /tmp/arch.sh ${VER} \
   && mv /tmp/linux/* /opt \
-  && cd /opt && mv hpool-* hpool-chia-miner \
+  && cd /opt && mv hpool-* hpool-chia-miner && ls -ahl \
   && cp /usr/share/zoneinfo/$TZ /etc/localtime \
   && echo $TZ > /etc/timezone \
   && cat /etc/timezone \

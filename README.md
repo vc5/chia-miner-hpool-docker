@@ -5,8 +5,8 @@
 
 ```bash
 docker run --name miner \
-   -v /path/to/plots:/plots/
-   -v /path/to/config.yaml:/opt/config.yaml
+   -v /path/to/plots:/plots \
+   -v /path/to/config.yaml:/opt/config.yaml \
    vincent5/hpool-chia-miner
 ```
 
