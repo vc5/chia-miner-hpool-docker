@@ -5,7 +5,7 @@ ARG TARGETARCH
 ARG ARCH
 ENV configfile="/opt/config.yaml"
 ENV log_dir="/log"
-ENV TZ="Asia/Shanghai"
+ENV TZ=Asia/Shanghai
 
 
 COPY ./entrypoint.sh /root/
@@ -14,7 +14,7 @@ COPY ./arch.sh  /tmp/
 RUN apk add --no-cache wget tzdata \
   && chmod +x  /tmp/arch.sh /root/entrypoint.sh \
   && mkdir /plots /tmp/linux  \
-  && /tmp/arch.sh ${VER} \
+  && /tmp/arch.sh ${VER} && ls /tmp/linux -ahl\
   && mv /tmp/linux/* /opt \
   && cd /opt && mv hpool-* hpool-chia-miner && ls -ahl \
   && cp /usr/share/zoneinfo/$TZ /etc/localtime \
