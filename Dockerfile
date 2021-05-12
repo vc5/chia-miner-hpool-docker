@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.13
 
 ARG VER=v1.2.0-5
 ARG TARGETARCH

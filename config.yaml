@@ -8,7 +8,7 @@ extraParams: {}
 log:
   lv: info
   path: ./log/
-  name: miner.log
+  name: minerlog
 url:
   info: ""
   submit: ""
