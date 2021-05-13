@@ -26,4 +26,4 @@ RUN apt-get -qq update \
 
 WORKDIR /opt
 
-ENTRYPOINT ["sh", "/root/entrypoint.sh"]
+ENTRYPOINT ["/bin/sh", "/root/entrypoint.sh"]
