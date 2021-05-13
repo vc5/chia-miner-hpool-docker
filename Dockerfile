@@ -12,7 +12,7 @@ COPY ./entrypoint.sh /root/
 COPY ./arch.sh  /tmp/
 
 RUN apt-get -qq update \
-    && apt-get -qq install -y --no-install-recommends ca-certificates wget \
+    && apt-get -qq install -y --no-install-recommends ca-certificates wget unzip \
     && chmod +x  /tmp/arch.sh /root/entrypoint.sh \
     && /tmp/arch.sh ${VER} && ls /tmp/linux -ahl\
     && mv /tmp/linux/* /opt \
