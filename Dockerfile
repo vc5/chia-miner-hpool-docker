@@ -1,6 +1,7 @@
 FROM debian:stable-slim
 
-ARG VER=v1.5.1-3
+ARG VER=1.5.1
+ARG BUILDVER=3
 ARG TARGETARCH
 ARG ARCH
 ENV configfile="/opt/config.yaml"
@@ -14,7 +15,7 @@ COPY ./arch.sh  /tmp/
 RUN apt-get -qq update \
     && apt-get -qq install -y --no-install-recommends ca-certificates wget unzip \
     && chmod +x  /tmp/arch.sh /root/entrypoint.sh \
-    && /tmp/arch.sh ${VER} && ls /tmp/linux -ahl\
+    && /tmp/arch.sh ${VER} v${VER}-${BUILDVER} && ls /tmp/linux -ahl\
     && mv /tmp/linux/* /opt \
     && cd /opt && mv hpool-* hpool-chia-miner \
     && chmod +x /opt/hpool-chia-miner \
