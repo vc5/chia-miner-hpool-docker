@@ -1,7 +1,7 @@
 FROM debian:stable-slim
 
-ARG VER=1.5.4
-ARG BUILDVER=2
+ARG VER=1.5.6
+ARG BUILDVER=1
 ARG TARGETARCH
 ARG ARCH
 ENV configfile="/opt/config.yaml"
