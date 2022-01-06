@@ -15,11 +15,7 @@ COPY ./arch.sh  /tmp/
 RUN apt-get -qq update \
     && apt-get -qq install -y --no-install-recommends ca-certificates wget unzip \
     && chmod +x  /tmp/arch.sh /root/entrypoint.sh \
-    && /tmp/arch.sh ${VER} v${VER}-${BUILDVER} && ls /tmp/linux -ahl\
-    && rm /tmp/linux/hpool-miner-chia.zip -f \
-    && mv /tmp/linux/* /opt \
-    && cd /opt && mv hpool-* hpool-chia-miner \
-    && chmod +x /opt/hpool-chia-miner \
+    && /tmp/arch.sh \
     && cp /usr/share/zoneinfo/$TZ /etc/localtime \
     && echo $TZ > /etc/timezone \
     && cat /etc/timezone \
