@@ -1,6 +1,6 @@
 FROM debian:stable-slim
 
-ARG VER=1.5.6
+ARG VER=1.5.9
 ARG BUILDVER=1
 ARG TARGETARCH
 ARG ARCH
@@ -15,7 +15,7 @@ COPY ./arch.sh  /tmp/
 RUN apt-get -qq update \
     && apt-get -qq install -y --no-install-recommends ca-certificates wget unzip \
     && chmod +x  /tmp/arch.sh /root/entrypoint.sh \
-    && /tmp/arch.sh \
+    && /tmp/arch.sh ${VER} ${BUILDVER}\
     && cp /usr/share/zoneinfo/$TZ /etc/localtime \
     && echo $TZ > /etc/timezone \
     && cat /etc/timezone \
