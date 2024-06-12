@@ -5,7 +5,7 @@ if [ "$TARGETARCH" = "arm" ] ; then ARCH=arm;fi
 
 VER=$1
 BUILD_VER=$2
-ZIP_URL = "https://github.com/h9-dev/chia-miner/releases/download/v${VER}/HPool-Miner-chia-og-v${VER}-${BUILD_VER}-linux.zip "
+ZIP_URL = "https://github.com/h9-dev/chia-miner/releases/download/v${VER}/H9-Miner-chia-og-v${VER}-${BUILD_VER}-linux.zip "
 
 
 echo ${ZIP_URL}
