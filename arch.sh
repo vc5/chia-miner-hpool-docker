@@ -13,5 +13,5 @@ ZIP_URL="https://github.com/h9-dev/chia-miner/releases/download/v${VER}/H9-Miner
 echo ${ZIP_URL}
 wget -q --no-check-certificate ${ZIP_URL} -O /tmp/chia-miner.zip && unzip -j /tmp/chia-miner.zip -d /tmp/linux
 ls /tmp/linux -ahl
-mv /tmp/linux/hpool-miner-chia-linux-${ARCH} /opt/hpool-chia-miner
-chmod +x /opt/hpool-chia-miner
+mv /tmp/linux/h9-miner-chia-linux-${ARCH} /opt/h9-chia-miner
+chmod +x /opt/h9-chia-miner
